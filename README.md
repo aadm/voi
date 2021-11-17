@@ -12,13 +12,13 @@ To launch the app click the button below:
 
 ## Background
 
-The idea is to estimate the posterior probability of an event `H` (e.g., a subsurface geological scenario being true) if we have some new data or information (`A`) with a certain accuracy. The conditional probability of `H` given `A` (`P(H|A)`) is expressed with the Bayes theorem: `P(H|A) = ( P(A|H) * P(H) )/ P(A)`.
+The idea is to estimate the posterior probability of an event `H` (e.g., a subsurface geological scenario being true) if we have some new data or information (`A`) with a certain accuracy. The conditional probability of `H` given `A` is expressed with the Bayes theorem: `P(H|A) = ( P(A|H) * P(H) )/ P(A)`.
 
 The marginal probability `P(A)` is also equal to: `P(A) = P(A|H) * P(H) + P(A|~H) * P(~H)`
 
-We can express `P(A)` in terms of *sensitivity*, i.e.  ability of the test to detect true positives or `P(A|H)`, and *specificity* i.e. the ability of the test to detect true negatives or `P(~A|~H)`.  Sensitivity and specificity are two aspects of accuracy; please see wikipedia for further info! This is just a quick readme after all!
+We can express `P(A)` in terms of *sensitivity*, i.e. the ability of the test or data to detect true positives or `P(A|H)`, and *specificity* i.e. the ability of the test to detect true negatives or `P(~A|~H)`.  Sensitivity and specificity are two aspects of accuracy; please see wikipedia for further info! This is just a quick readme after all!
 
-By replacing `P(H)` (prior probability) with `POS` (probability of success), we can write Bayes theorem in terms of those 3 things (POS, sensitivity and specificity) that are among those taken into account during a VoI analysis:
+By replacing `P(H)` (prior probability) with `POS` (probability of success), we can write Bayes theorem in terms of POS, sensitivity and specificity that are key aspects taken into account during a VoI analysis:
 
 `P(H|A) = (sens * POS) / ( sens * POS + (1-spec) * (1-POS) )`
 
