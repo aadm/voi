@@ -1,0 +1,7 @@
+channels:
+  - pyviz
+  - defaults
+  - conda-forge
+
+packages:
+  - jupyter-panel-proxy

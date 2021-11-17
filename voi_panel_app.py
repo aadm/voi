@@ -12,6 +12,13 @@ from voi_funcs import *
 #  I discovered kind of by accident that if you just specify urlpath=panel on binder it renders all your Panel-servable notebooks thusly: https://aws-uswest2-binder.pangeo.io/v2/gh/reproducible-notebooks/Holoviz-Demos/master?urlpath=panel
 
 
+
+# https://aws-uswest2-binder.pangeo.io/v2/gh/reproducible-notebooks/Holoviz-Demos/binder?urlpath=git-pull?repo=https://github.com/reproducible-notebooks/Holoviz-Demos%26amp%3Bbranch=master%26amp%3Burlpath=lab/tree/Holoviz-Demos/COAWST-Explorer.ipynb%3Fautodecode
+
+
+# https://aws-uswest2-binder.pangeo.io/v2/gh/reproducible-notebooks/Holoviz-Demos/master?urlpath=panel
+
+
 #--- panel app
 #    to launch from shell:
 #    panel serve --show voi_panel_app.py
@@ -19,7 +26,7 @@ from voi_funcs import *
 
 #--- App 1: shows bayesian update of posterior pos depending on
 #    false positive and false negative expected (like MCard Excel)
-
+# https://mybinder.org/v2/gh/mycarta/Colormap-distorsions-Panel-app/master?urlpath=%2Fpanel%2FDemonstrate_colormap_distortions_interactive_Panel
 # grades = ['n/a', 'many', 'some', 'few', 'rare']
 # widget_sens  = pnw.RadioButtonGroup(name='Exp_FN', value='n/a', options=grades)
 # widget_spec  = pnw.RadioButtonGroup(name='Exp_FP', value='n/a', options=grades)
