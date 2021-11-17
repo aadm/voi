@@ -1,7 +1,7 @@
 # VoI fiddler
 
 
-Simple app to study prior vs posterior probabilities dependent on specificity and sensitivity for VoI (Value of Information) analysis.
+Simple app to see how posterior probability changes with variations in prior probability, specificity and sensitivity, designed for VoI (Value of Information) analysis.
 
 ## Run the app
 
@@ -12,30 +12,28 @@ To launch the app click the button below:
 
 ## Background
 
-The idea is to estimate what would be the posterior probability of an event $H$ (i.e. a subsurface geological scenario being true) if we have some new data or information $A$ that has a certain accuracy.
-
-The Bayes theorem is `P(H|A) = ( P(A|H) * P(H) )/ P(A)`
+The idea is to estimate the posterior probability of an event `H` (e.g., a subsurface geological scenario being true) if we have some new data or information (`A`) with a certain accuracy. The conditional probability of `H` given `A` (`P(H|A)`) is expressed with the Bayes theorem: `P(H|A) = ( P(A|H) * P(H) )/ P(A)`.
 
 The marginal probability `P(A)` is also equal to: `P(A) = P(A|H) * P(H) + P(A|~H) * P(~H)`
 
-We can rewrite the above in terms of *sensitivity*, i.e.  ability of the test to detect true positives or `P(A|H)`, and *specificity* i.e. the ability of the test to detect true negatives or `P(~A|~H)`.
+We can express `P(A)` in terms of *sensitivity*, i.e.  ability of the test to detect true positives or `P(A|H)`, and *specificity* i.e. the ability of the test to detect true negatives or `P(~A|~H)`.  Sensitivity and specificity are two aspects of accuracy; please see wikipedia for further info! This is just a quick readme after all!
 
-We can replace `P(H)` with `POS` (probability of success), and therefore write Bayes theorem in terms of these 3 things (POS, sensitivity and specificity) that are those usually taken into account during a VoI analysis:
+By replacing `P(H)` (prior probability) with `POS` (probability of success), we can write Bayes theorem in terms of those 3 things (POS, sensitivity and specificity) that are among those taken into account during a VoI analysis:
 
 `P(H|A) = (sens * POS) / ( sens * POS + (1-spec) * (1-POS) )`
 
-The POS or prior probability `P(H)` is entered as a range, and internally converted to a random gaussian distribution of `n` samples with mean equal to the mid value of the specified range.
+The prior `P(H)` is entered as a range, and internally converted to a random gaussian distribution of `n` samples with mean equal to the mid value of the specified range.
 
-The number of samples can be selected with the three buttons `Low`, `Medium` or `High`.
+The number of samples `n` can be selected with the three buttons `Low`, `Medium` or `High` that corresponds respectively to 20, 200 and 2000 samples.
 
-By default a certain amount of uniform noise is added to both spcificity and sensitivity to simulate subjectivity in the experts' assessment. The noise can also be removed entirely by decreasing the value with the slider `Max noise` to 0.
+By default a certain amount of uniform noise is added to both specificity and sensitivity to simulate subjectivity in the experts' assessment (in geosciences there are no repeatable experiments to be made so that we can estimate the reliability of a certain type of data or information). This noise can be removed entirely by decreasing the slider `Max noise` to 0.
 
 
 ## Nerd notes
 
 The custom button above is made with [mybinder's custom badge generator](https://mybinder.readthedocs.io/en/latest/howto/badges.html).
 
-If you have a full conda installation with the required libraries installed (Numpy, Matplotlib and [Panel](https://panel.holoviz.org/) and you know what you're doing, you can run the app locally by cloning this repo then from a shell:
+If you have a full conda installation with the required libraries installed (Numpy, Matplotlib and [Panel](https://panel.holoviz.org/) and you know what you're doing, you can run the app locally by cloning this repo then run the following line from a shell:
 
 ```
 $ panel serve --show voi_panel_app.ipynb
