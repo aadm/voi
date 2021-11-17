@@ -5,8 +5,5 @@ channels:
 dependencies:
   - numpy
   - panel
-  - bokeh
-  - python
   - jupyter-panel-proxy
-  - pandas
   - matplotlib
