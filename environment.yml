@@ -2,6 +2,11 @@ channels:
   - pyviz
   - defaults
   - conda-forge
-
-packages:
+dependencies:
+  - numpy
+  - panel
+  - bokeh
+  - python
   - jupyter-panel-proxy
+  - pandas
+  - matplotlib

@@ -13,4 +13,4 @@ Otherwise click the button below:
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/aadm/voi/HEAD)
 
 
-[![Launch app](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/aadm/voi/main?urlpath=voi)
+[![Launch app](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/aadm/voi/main?urlpath=/panel/voi_panel_app)
