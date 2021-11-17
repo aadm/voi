@@ -12,7 +12,9 @@ To launch the app click the button below:
 
 ## Background
 
-The idea is to estimate the posterior probability of an event `H` (e.g., a subsurface geological scenario being true) if we have some new data or information (`A`) with a certain accuracy. The conditional probability of `H` given `A` is expressed with the Bayes theorem: `P(H|A) = ( P(A|H) * P(H) )/ P(A)`.
+The idea is to estimate the posterior probability of an event `H` (e.g., a subsurface geological scenario being true) if we have some new data or information (`A`) with a certain accuracy. The conditional probability of `H` given `A` is expressed with the Bayes theorem:
+
+`P(H|A) = ( P(A|H) * P(H) )/ P(A)`.
 
 The marginal probability `P(A)` is also equal to: `P(A) = P(A|H) * P(H) + P(A|~H) * P(~H)`
 
